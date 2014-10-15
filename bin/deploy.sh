@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-cd /home/youpers/insp-web
+cd /home/youpers/yp-ewl-webclient
 git pull origin $1
 export NODE_ENV=$2
 npm install
