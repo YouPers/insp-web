@@ -1,0 +1,13 @@
+machine:
+  node:
+    version: v0.10.28
+deployment:
+  uat:
+    branch: uat
+    commands:
+    - ssh youpers@insp.youpers.com "~/yp-ewl-webclient/bin/deploy.sh uat uat"
+
+  cimaster:
+    branch: master
+    commands:
+    - ssh youpers@insp.youpers.com "~/yp-ewl-webclient/bin/deploy.sh master cimaster"
