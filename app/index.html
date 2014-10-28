@@ -33,7 +33,18 @@ is used in each call, as parameters or in the result.
     For simple calls it allows to call the API with test data and look at the returned result directly in the Browser.
 </p>
 
-<h3>Recommended Tools</h3>
+<h3>Authentication</h3>
+<p>The INSPIRATION api is stateless and follows REST principles. The server does therefore not keep any Client Session
+information. In order to do authentication and authorization each backend request needs to be authenticated.</p>
+<p>In production mode the API supports only HTTP bearer-token Authentication for normal requests, in develeopment mode normal
+requests may also be authticated with HTTP Basic Authentication</p>
+<p>The endpoint /login may be used to exchange username/password for a accessToken. So after one call to /login authenticated with
+username/password (HTTP Basic Auth) a client is able to store an accessToken and can use this accessToken for all further request using HTTP Bearer Token auth.</p>
+<p>In production mode it is also possible to use several oAuth providers to gain an accessToken, currently enabled is "Login with Facebook" and
+"login with your Github Account"</p>
+
+
+<h2>Recommended Tools</h2>
 <ul>
     <li>Command Line Tool to call API: HTTPie: <a href="http://httpie.org">http://httpie.org</a> or as an alternative: curl <a href="http://curl.haxx.se/">http://curl.haxx.se/</a>
     </li>
