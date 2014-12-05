@@ -48,7 +48,8 @@ var specificConfigs = {
     ci: { // used by circleci shell when building no the circleci vm
         name: 'ci',
         webclientUrl: 'http://localhost:9000',
-        backendUrl: 'https://cimaster.youpers.com/api'
+        backendUrl: 'https://cimaster.youpers.com/api',
+        projectName: "ci build"
     },
     cimaster: { // used by automtatic deploys on cimaster machine
         name: 'cimaster',
