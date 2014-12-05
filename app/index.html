@@ -10,20 +10,20 @@
     <!-- endbuild -->
 </head>
 <body>
-<h1>INSPIRATION Backend</h1>
+<h1><%= config.projectName %> Backend Documentation</h1>
 
 <h2>End Point</h2>
 
-The API can be accessed at: <b>https://insp.youpers.com/api/[ressource-name]</b>
+The API can be accessed at: <b><%= config.backendUrl %>/[ressource-name]</b>
 <br><br>
 
-as an example to see whether it is running: <a href="https://insp.youpers.com/api/ping">https://insp.youpers.com/api/ping</a> or <a href="https://insp.youpers.com/api/ping/db">https://insp.youpers.com/api/ping/db</a>
+as an example to see whether it is running: <a href="<%= config.backendUrl %>/ping"><%= config.backendUrl %>/ping</a> or <a href="<%= config.backendUrl %>/ping/db"><%= config.backendUrl %>/ping/db</a>
 
 <h2>Documentation</h2>
 
 <h3>Generated Swagger Doc</h3>
 <p>On the following link you can access the swagger Documentation of the RestFUL API:</p>
-<a href="http://insp.youpers.com:5000">http://insp.youpers.com:5000</a>
+<a href="<%= config.swaggerUrl %>">config.swaggerUrl</a>
 <p>
 This is documentation is automatically generated using a tool called <a href="https://helloreverb.com/developers/swagger">Swagger</a>.
 It lists the supported resources (aka "Classes) and for each resource the supported calls. It also documents the data model that
@@ -34,7 +34,7 @@ is used in each call, as parameters or in the result.
 </p>
 
 <h3>Authentication</h3>
-<p>The INSPIRATION api is stateless and follows REST principles. The server does therefore not keep any Client Session
+<p>The <%= config.projectName %> api is stateless and follows REST principles. The server does therefore not keep any Client Session
 information. In order to do authentication and authorization each backend request needs to be authenticated.</p>
 <p>In production mode the API supports only HTTP bearer-token Authentication for normal requests, in develeopment mode normal
 requests may also be authticated with HTTP Basic Authentication</p>
@@ -48,7 +48,7 @@ username/password (HTTP Basic Auth) a client is able to store an accessToken and
 <ul>
     <li>Command Line Tool to call API: HTTPie: <a href="http://httpie.org">http://httpie.org</a> or as an alternative: curl <a href="http://curl.haxx.se/">http://curl.haxx.se/</a>
     </li>
-    <li>Some IDE Plugin to call restful APIs, exists for Eclipse and Intellij IDEA/Webstorm</li>
+    <li>Some IDE Plugins to call restful APIs, exists for Eclipse and Intellij IDEA/Webstorm</li>
     <li>Chrome Browser Plugins for testing Restful APIs are also quite useful</li>
 
 </ul>

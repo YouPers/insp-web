@@ -19,20 +19,16 @@ var defaultConfig = {
     name: 'default',
     webclientUrl: 'unspecified: adjust-config.js',
     backendUrl: 'unspecified: adjust-config.js',
-    translationSource: 'local',
-    googleAnalytics: {
-        webPropertyId: 'UA-39309635-4'
-    },
-    ui: {
-        showUserFeedbackLink: true
-    }
+    swaggerUrl: 'unsepcified: adjust-config.js',
+    projectName: "Youpers Backend"
 };
 
 var specificConfigs = {
     dev: {
         name: 'dev',
         webclientUrl: 'http://localhost:9000',
-        backendUrl: 'http://localhost:8000'
+        backendUrl: 'http://localhost:8000',
+        swaggerUrl: 'http://localhost:5000'
     },
     localvm: {
         // used to test from Windows VMs on your local machine,
@@ -52,28 +48,26 @@ var specificConfigs = {
     ci: { // used by circleci shell when building no the circleci vm
         name: 'ci',
         webclientUrl: 'http://localhost:9000',
-        backendUrl: 'https://cimaster.youpers.com/api',
-        googleAnalytics: {}
+        backendUrl: 'https://cimaster.youpers.com/api'
     },
     cimaster: { // used by automtatic deploys on cimaster machine
         name: 'cimaster',
         webclientUrl: 'https://cimaster.youpers.com',
-        backendUrl: 'https://cimaster.youpers.com/api',
-        googleAnalytics: {}
+        backendUrl: 'https://cimaster.youpers.com/api'
     },
     uat: {
         name: 'uat',
-        backendUrl: 'https://uat.youpers.com/api',
-        translationSource: 'local',
-        googleAnalytics: {
-            webPropertyId: 'UA-39309635-2'
-        }
+        backendUrl: 'https://uat.youpers.com/api'
     },
     prod: {
-        backendUrl: 'https://prod.youpers.com/api',
-        googleAnalytics: {
-            webPropertyId: 'UA-39309635-3'
-        }
+        backendUrl: 'https://prod.youpers.com/api'
+    },
+    insp: {
+        projectName: 'INSPIRATION',
+        name: 'insp',
+        webclientUrl: 'https://insp.youpers.com',
+        backendUrl: 'https://insp.youpers.com/api',
+        swaggerUrl: 'http://insp.youpers.com'
     }
 };
 
