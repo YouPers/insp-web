@@ -70,11 +70,11 @@ var specificConfigs = {
         swaggerUrl: 'http://insp.youpers.com'
     },
     weightchallenge: {
-        projectName: 'INSPIRATION',
+        projectName: 'WEIGHT CHALLENGE',
         name: 'insp',
-        webclientUrl: 'https://insp.youpers.com',
-        backendUrl: 'https://insp.youpers.com/api',
-        swaggerUrl: 'http://insp.youpers.com'
+        webclientUrl: 'https://weightchallenge.youpers.com',
+        backendUrl: 'https://weightchallenge.youpers.com/api',
+        swaggerUrl: 'http://weightchallenge.youpers.com'
     }
 
 };
