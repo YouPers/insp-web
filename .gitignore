@@ -6,3 +6,6 @@ bower_components/
 dist/
 build/
 .tmp/
+atlassian-ide-plugin.xml
+.idea/
+insp-web.iml
