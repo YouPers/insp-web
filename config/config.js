@@ -68,7 +68,15 @@ var specificConfigs = {
         webclientUrl: 'https://insp.youpers.com',
         backendUrl: 'https://insp.youpers.com/api',
         swaggerUrl: 'http://insp.youpers.com'
+    },
+    weightchallenge: {
+        projectName: 'INSPIRATION',
+        name: 'insp',
+        webclientUrl: 'https://insp.youpers.com',
+        backendUrl: 'https://insp.youpers.com/api',
+        swaggerUrl: 'http://insp.youpers.com'
     }
+
 };
 
 module.exports = {
