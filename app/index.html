@@ -17,7 +17,7 @@
 The API can be accessed at: <b><%= config.backendUrl %>/[ressource-name]</b>
 <br><br>
 
-as an example to see whether it is running: <a href="<%= config.backendUrl %>/ping"><%= config.backendUrl %>/ping</a> or <a href="<%= config.backendUrl %>/ping/db"><%= config.backendUrl %>/ping/db</a>
+As an example to see whether it is running: <a href="<%= config.backendUrl %>/ping"><%= config.backendUrl %>/ping</a> or <a href="<%= config.backendUrl %>/ping/db"><%= config.backendUrl %>/ping/db</a>
 
 <h2>Documentation</h2>
 
@@ -43,6 +43,9 @@ username/password (HTTP Basic Auth) a client is able to store an accessToken and
 <p>In production mode it is also possible to use several oAuth providers to gain an accessToken, currently enabled is "Login with Facebook" and
 "login with your Github Account"</p>
 
+<h3>Database Access for Developers</h3>
+<p>It is possible to enable direct DB access for developers. If it is enabled, it can be accessed at directly from any
+MongoDB Client like MongoHub, Intellij IDEA Mongo Plugin. Ask Youpers if you want to do this to get the access data</p>
 
 <h2>Recommended Tools</h2>
 <ul>
