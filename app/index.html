@@ -64,6 +64,14 @@ As an example to see whether it is running: <a href="<%= config.backendUrl %>/pi
     MongoDB Client like MongoHub, Intellij IDEA Mongo Plugin. Ask Youpers if you want to do this to get the access
     data</p>
 
+<h3>Data Synchronization</h3>
+
+<p>If you want to keep offline data in your client app, you may use the "updatesSince" feature. By passing a query
+    param "updatesSince" to any "GET /{{ressourceName}}" call (e.g. GET /ideas?updatesSince=2014-12-24T11:18:14.301Z) you
+    will get all objects that have been created, changed or deleted. For deletes only empty objects-shells with attributes
+    "id (objectId of the deleted object)" and "deleted (containing the timestamp, when it was deleted)". You may
+    also use the "updated" and "created" attributes, containing the respective timestamps.
+</p>
 <h2>Recommended Tools</h2>
 <ul>
     <li>Command Line Tool to call API: HTTPie: <a href="http://httpie.org">http://httpie.org</a> or as an alternative:
