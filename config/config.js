@@ -15,15 +15,18 @@
  */
 var _ = require('lodash');
 
+var env = process.env.NODE_ENV || 'dev';
+
 var defaultConfig = {
-    name: 'default',
-    webclientUrl: 'unspecified: adjust-config.js',
-    backendUrl: 'unspecified: adjust-config.js',
-    swaggerUrl: 'unsepcified: adjust-config.js',
-    projectName: "Youpers Backend"
+    name: process.env.NODE_ENV,
+    webclientUrl: 'https://' + env + '.youpers.com',
+    backendUrl: 'https://' + env + '.youpers.com/api',
+    swaggerUrl: 'https://' + env + '.youpers.com:5000',
+    projectName: "Youpers Backend: " + env
 };
 
 var specificConfigs = {
+    default: {},
     dev: {
         name: 'dev',
         webclientUrl: 'http://localhost:9000',
@@ -37,47 +40,7 @@ var specificConfigs = {
         name: 'localvm',
         webclientUrl: 'http://localvm:9000',
         backendUrl: 'http://localvm:8000'
-    },
-
-// RBLU: I think this is not used anywhere, so commenting out and checking in to see what happens
-//    test: {
-//        name: 'test',
-//        webclientUrl: 'http://localhost:9000',
-//        backendUrl: 'http://localhost:8000'
-//    },
-    ci: { // used by circleci shell when building no the circleci vm
-        name: 'ci',
-        webclientUrl: 'http://localhost:9000',
-        backendUrl: 'https://cimaster.youpers.com/api',
-        projectName: "ci build"
-    },
-    cimaster: { // used by automtatic deploys on cimaster machine
-        name: 'cimaster',
-        webclientUrl: 'https://cimaster.youpers.com',
-        backendUrl: 'https://cimaster.youpers.com/api'
-    },
-    uat: {
-        name: 'uat',
-        backendUrl: 'https://uat.youpers.com/api'
-    },
-    prod: {
-        backendUrl: 'https://prod.youpers.com/api'
-    },
-    insp: {
-        projectName: 'INSPIRATION',
-        name: 'insp',
-        webclientUrl: 'https://insp.youpers.com',
-        backendUrl: 'https://insp.youpers.com/api',
-        swaggerUrl: 'http://insp.youpers.com:5000'
-    },
-    weightchallenge: {
-        projectName: 'WEIGHT CHALLENGE',
-        name: 'insp',
-        webclientUrl: 'https://weightchallenge.youpers.com',
-        backendUrl: 'https://weightchallenge.youpers.com/api',
-        swaggerUrl: 'http://weightchallenge.youpers.com:5000'
     }
-
 };
 
 module.exports = {
