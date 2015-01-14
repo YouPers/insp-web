@@ -21,7 +21,7 @@ var defaultConfig = {
     name: process.env.NODE_ENV,
     webclientUrl: 'https://' + env + '.youpers.com',
     backendUrl: 'https://' + env + '.youpers.com/api',
-    swaggerUrl: 'https://' + env + '.youpers.com:5000',
+    swaggerUrl: 'http://' + env + '.youpers.com:5000',
     projectName: "Youpers Backend: " + env
 };
 
