@@ -424,7 +424,7 @@ module.exports = function (grunt) {
                     'data': {
                         mockscripts: "",
                         ngappsuffix: '',
-                        config: environmentConfig[process.env.NODE_ENV || 'default']
+                        config: environmentConfig[process.env.NODE_ENV] || environmentConfig['default']
                     }
                 },
                 'files': {
