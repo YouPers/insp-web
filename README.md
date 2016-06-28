@@ -1,4 +1,4 @@
 insp-web
 ========
 
-Testfrontend for INSPIRATION
+Webfrontend for INSPIRATION
